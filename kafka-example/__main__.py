@@ -1,5 +1,5 @@
 import core
 
-print('Application Starting...')
+print('Kafka Example Application START')
 core.run()
-print('...Application Tearing Down')
+print('Kafka Example Application END')

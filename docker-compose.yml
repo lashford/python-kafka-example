@@ -7,16 +7,13 @@ services:
       - "2181:2181"
   kafka:
     image: wurstmeister/kafka:0.10.1.0
-    healthcheck:
-      test: ["CMD", "nc", "-z", "localhost", "9092"]
-      interval: 15s
-      timeout: 15s
-      retries: 4
     environment:
       KAFKA_ADVERTISED_HOST_NAME: 192.168.99.100
       KAFKA_ADVERTISED_PORT: 9092
       KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
       KAFKA_CREATE_TOPICS: "messages:1:1"
       KAFKA_ZOOKEEPER_CONNECT: "zookeeper:2181"
+    ports:
+      - "9092:9092"
     expose:
       - 9092
