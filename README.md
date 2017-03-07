@@ -20,11 +20,17 @@ This will launch a kafka service listening on port `9092` initialised with a Top
 ### Build dependencies
 
 * Python 3 `$ brew install python3`
-* Virtual Env `$ sudo pip install virtualenv`
+* Virtual Env `$ sudo pip3 install virtualenv`
 
 ### Configure and Run
 
+From the terminal enable & configure the application dependencies.
 * `$ virtualenv env`
 * `$ source env/bin/activate`
-* `(env) $ pip install -r requirements.txt`
+* `(env) $ pip3 install -r requirements.txt`
+
+You can now run the application
 * `(env) $ python3 kafka-example`
+
+To leave the virtual Environment
+* `(env) $ deactivate`
